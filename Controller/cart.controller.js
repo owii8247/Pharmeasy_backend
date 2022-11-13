@@ -6,9 +6,9 @@ const GetCart=async (req,res)=>{
 }
 
 const Postcart=async(req,res)=>{
- const {id,name,img,cost,price,off,qty}=req.body;
+ const {id, title, img1,img2,img3,ancestor, mrp,strike,discount, qty}=req.body;
  const new_data= CartModel({
-    id,name,img,cost,price,off,qty
+   id, title, img1,img2,img3,ancestor, mrp,strike,discount, qty
  })
 await new_data.save()
  res.send({"msg":"Product Added To The Cart"})
